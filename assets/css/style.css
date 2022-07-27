@@ -1,0 +1,163 @@
+@import 'https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
+:root {
+    --primary: #1fff62;
+    --primary-hover: #61ff90;
+    --font: 'Source Code Pro', monospace;
+    --background: #ffffff;
+    --background-textarea: #ffffff;
+    --textarea-border: #000000;
+    --text-color: #000000;
+    --text-color-hover: #444444;
+    --darkmode-button-image: url("/assets/svg/dark_mode.svg")
+}
+
+body {
+    background-color: var(--background)
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    transition: .2s
+}
+
+.darkmode_button {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: var(--text-color);
+    height: 40px;
+    width: 40px;
+    background-size: 40px 40px;
+    background-image: var(--darkmode-button-image)
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.header h1 {
+    font-family: var(--font);
+    color: var(--text-color)
+}
+
+.header h1:hover {
+    color: var(--text-color-hover)
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.wrapper form {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.wrapper form textarea {
+    font-family: var(--font);
+    background-color: var(--background-textarea);
+    color: var(--text-color);
+    resize: none;
+    width: 800px;
+    height: 600px;
+    margin: 0 0 25px;
+    padding: 15px;
+    border-color: var(--textarea-border);
+    border-radius: 20px;
+    border-width: 2px;
+    border-style: solid
+}
+
+.wrapper form textarea:focus {
+    outline: 0
+}
+
+.wrapper button {
+    padding: 10px 30px;
+    font-size: 20px;
+    font-family: var(--font);
+    background-color: var(--primary);
+    color: var(--text-color);
+    border-radius: 100px;
+    border-width: 0;
+    border-style: solid
+}
+
+.wrapper button:hover {
+    background-color: var(--primary-hover)
+}
+
+.footer {
+    pointer-events: none;
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.footer h3 {
+    font-family: var(--font);
+    color: var(--text-color)
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color)
+}
+
+a:hover {
+    color: var(--text-color-hover)
+}
+
+::-webkit-scrollbar {
+    width: 8px
+}
+
+::-webkit-scrollbar-track {
+    background: 0 0
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    border-style: solid;
+    border-color: transparent;
+    background: var(--primary)
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-hover)
+}
+
+.wrapper form textarea::-webkit-scrollbar {
+    width: 8px
+}
+
+.wrapper form textarea::-webkit-scrollbar-track {
+    margin: 15px 0;
+    background: 0 0
+}
+
+.wrapper form textarea::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    border-style: solid;
+    border-color: transparent;
+    background: var(--primary)
+}
+
+.wrapper form textarea::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-hover)
+}
